@@ -1,7 +1,7 @@
 ###  `Day1_Python.md`:
 
 ```markdown
-# 📘 Day 1: Python Basics — A Personal Recap
+#  Day 1: Python Basics — A Personal Recap
 
 I’ve been going over the basics of Python lately, and today I focused on revising its main features.  
 I didn’t just want to memorize bullet points, so I tried to understand **why** each feature is useful and **how** it actually shows up when writing code.
@@ -25,7 +25,7 @@ It just makes sense. I didn’t need to worry about semicolons or weird symbols 
 
 ---
 
-## 2. 🔄 Dynamically Typed Language
+## 2.  Dynamically Typed Language
 
 This means I don’t have to define variable types. Python figures it out based on the value I assign.
 
