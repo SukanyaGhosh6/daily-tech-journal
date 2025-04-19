@@ -1,14 +1,14 @@
 
 
 ###  `Day5_Set.md` 
-```markdown
+
 #  Day 5: Python Sets — Unordered, Unique & Mutable
 
 Today I explored the `set` data type in Python. Sets are very different from lists and tuples in terms of behavior and purpose, and I had a lot of fun playing with them!
 
 Let’s dive into what makes sets unique 👇
 
-```
+
 
 ## 🔹 What is a Set?
 
