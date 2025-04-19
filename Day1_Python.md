@@ -14,7 +14,7 @@ Here’s my summary — more like learning notes for myself, with simple example
 
 Honestly, this is one of the first things I liked about Python. The syntax is clean and doesn’t feel overwhelming, even as a beginner.
 
-**Example I tried:**
+Example I tried:
 
 ```python
 name = "Sukanya"
