@@ -1,5 +1,4 @@
 
-```markdown
 #  Day 3: Python Lists — Basics, Characteristics & Common Functions
 
 Today I focused on one of the most important and commonly used data types in Python — Lists.  
@@ -19,7 +18,7 @@ They can contain items of any data type
 Defined using square brackets `[]`
 
 
-```
+
 ##  Homogeneous vs. Heterogeneous Lists
 
 ###  Homogeneous List
