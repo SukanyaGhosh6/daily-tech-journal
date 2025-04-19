@@ -24,7 +24,7 @@ t = (1, 2, 3)
 t = tuple([4, 5, 6])
 ```
 
-### ✅ Default Value
+###  Default Value
 
 An empty tuple is created like this:
 
