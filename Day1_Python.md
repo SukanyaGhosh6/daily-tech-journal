@@ -1,6 +1,5 @@
 ###  `Day1_Python.md`:
 
-```markdown
 #  Day 1: Python Basics — A Personal Recap
 
 I’ve been going over the basics of Python lately, and today I focused on revising its main features.  
