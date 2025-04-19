@@ -8,7 +8,7 @@ Instead of just memorizing stuff, I tried out examples and actually played aroun
 
 ## 1.  Keywords – Can’t Use These as Variable Names!
 
-Python has some special words that are **reserved**, like `if`, `while`, `for`, `True`, `False`, etc. You **can’t use them** as variable names.
+Python has some special words that are reserved, like `if`, `while`, `for`, `True`, `False`, etc. You can’t use them as variable names.
 
 ###  Example:
 
