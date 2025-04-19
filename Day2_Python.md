@@ -1,4 +1,4 @@
-```markdown
+
 #  Day 2: Python Revision — Keywords, Operators, Built-in Functions, Variables & Data Types
 
 Okay, so today I sat down and revised some core Python concepts that I kinda knew but wanted to understand better.  
