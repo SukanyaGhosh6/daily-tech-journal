@@ -4,7 +4,7 @@
 Okay, so today I sat down and revised some core Python concepts that I kinda knew but wanted to understand better.  
 Instead of just memorizing stuff, I tried out examples and actually played around with the code a bit — it made a huge difference!
 
----
+
 
 ## 1.  Keywords – Can’t Use These as Variable Names!
 
