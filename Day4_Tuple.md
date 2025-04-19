@@ -14,7 +14,7 @@ A tuple is an ordered collection of elements — like a list — but once create
 
 It is defined using parentheses `()` or the `tuple()` constructor.
 
----
+
 ```
 ## Syntax
 
