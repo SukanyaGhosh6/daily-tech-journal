@@ -1,5 +1,3 @@
-
-
 ###  `Day5_Set.md` 
 
 #  Day 5: Python Sets — Unordered, Unique & Mutable
@@ -10,7 +8,7 @@ Let’s dive into what makes sets unique 👇
 
 
 
-## 🔹 What is a Set?
+##  What is a Set?
 
 A **set** is a built-in Python data type used to store **multiple items** in a **single variable**, just like lists and tuples.  
 However, sets:
@@ -22,7 +20,7 @@ Are **unindexed**
 
 ---
 
-## ✍️ Syntax & Default Value
+##  Syntax & Default Value
 
 ```python
 # Creating a set
