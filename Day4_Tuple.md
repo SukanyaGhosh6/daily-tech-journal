@@ -1,4 +1,3 @@
-```markdown
 #  Day 4: Python Tuples — Immutable but Powerful
 
 Today I explored `tuple`, another important built-in data type in Python.  
@@ -15,7 +14,6 @@ A tuple is an ordered collection of elements — like a list — but once create
 It is defined using parentheses `()` or the `tuple()` constructor.
 
 
-```
 ## Syntax
 
 ```python
