@@ -22,14 +22,14 @@ Defined using square brackets `[]`
 ```
 ##  Homogeneous vs. Heterogeneous Lists
 
-### ✅ Homogeneous List
+###  Homogeneous List
 All elements are of the same type.
 
 ```python
 numbers = [1, 2, 3, 4, 5]  # All integers
 
 ```
-### ✅ Heterogeneous List
+###  Heterogeneous List
 List contains elements of different data types.
 
 ```python
