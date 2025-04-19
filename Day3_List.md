@@ -19,7 +19,7 @@ They can contain items of any data type
 Defined using square brackets `[]`
 
 
-
+```
 ##  Homogeneous vs. Heterogeneous Lists
 
 ### ✅ Homogeneous List
@@ -27,8 +27,8 @@ All elements are of the same type.
 
 ```python
 numbers = [1, 2, 3, 4, 5]  # All integers
-```
 
+```
 ### ✅ Heterogeneous List
 List contains elements of different data types.
 
@@ -156,5 +156,5 @@ Only the **first** `2` was removed.
 ---
 
 Tomorrow I’ll dive into **tuples, sets, and dictionaries** — and how they compare with lists. 
-```
+
 
