@@ -1,4 +1,4 @@
-#  Day 5 (Part 2): Python Dictionaries — Key-Value Magic
+#  Day 6: Python Dictionaries — Key-Value Magic
 
 After sets, I explored another powerful and super useful Python data type — the **dictionary (`dict`)**.  
 Unlike lists or sets, dictionaries store data in **key-value pairs**, making it perfect for structured data.
