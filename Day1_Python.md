@@ -4,7 +4,7 @@
 #  Day 1: Python Basics — A Personal Recap
 
 I’ve been going over the basics of Python lately, and today I focused on revising its main features.  
-I didn’t just want to memorize bullet points, so I tried to understand **why** each feature is useful and **how** it actually shows up when writing code.
+I didn’t just want to memorize bullet points, so I tried to understand why each feature is useful and how it actually shows up when writing code.
 
 Here’s my summary — more like learning notes for myself, with simple examples I tried while revising:
 
