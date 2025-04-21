@@ -90,7 +90,7 @@ When a user submits a form (say, to register for a course), SQL is used in the b
 
 These rules define what a proper **relational database** should follow. Today, I learned about the first four rules:
 
-### ✅ Rule 1: Data in Cells Must Be Single-Valued
+###  Rule 1: Data in Cells Must Be Single-Valued
 
 Each cell in a table should contain only **one value**, not multiple.  
 For example:
@@ -105,14 +105,14 @@ Subjects = 'Math, English, Science'  -- ❌ violates Rule 1
 
 ---
 
-### ✅ Rule 2: Everything Is Stored in Tables
+###  Rule 2: Everything Is Stored in Tables
 
 In an RDBMS, even **meta-information** (data about the data) should be stored in tables.  
 This makes querying and maintaining the system consistent.
 
 ---
 
-### ✅ Rule 3: Data Can Be Stored Across Multiple Tables
+###  Rule 3: Data Can Be Stored Across Multiple Tables
 
 You can normalize data by storing it across multiple related tables, and then **connect them using keys**.
 
@@ -124,7 +124,7 @@ You can use `student_id` as a **foreign key** to connect them.
 
 ---
 
-### ✅ Rule 4: Data Must Be Validated in Two Steps
+###  Rule 4: Data Must Be Validated in Two Steps
 
 Before inserting data into a table, it should be validated by:
 
