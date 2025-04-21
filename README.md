@@ -1,5 +1,4 @@
 # daily-tech-journal
-{Daily logs of my journey learning Python, DSA, SQL , Ethical Hacking concepts and many more.}
 
 Welcome to my personal tech journal! ✨  
 This is where I document my daily progress as I revisit and brush up on the core concepts of:
