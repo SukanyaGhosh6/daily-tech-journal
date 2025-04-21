@@ -1,5 +1,5 @@
 
---# Day 7: Getting Started with SQL — Basics, History & How Data is Validated
+# Day 7: Getting Started with SQL — Basics, History & How Data is Validated
 
 Since I’ve been learning Python Full Stack Development, I figured it was the right time to start revising SQL. After all, databases are a big part of backend development, and I don’t want to just "know" SQL — I want to really understand it.
 
