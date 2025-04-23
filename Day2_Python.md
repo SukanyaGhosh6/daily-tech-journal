@@ -16,7 +16,7 @@ Python has some special words that are reserved, like `if`, `while`, `for`, `Tru
 if = 5  # ❌ SyntaxError: invalid syntax
 ```
 
-Python didn’t like it. 😂
+Python didn’t like it. 
 
 You can also list all keywords with:
 
@@ -94,22 +94,22 @@ name = "Sukanya"
 
 ### 1️⃣ Single-Valued Data Types
 
-#### 🔢 Integer (`int`)
+####  Integer (`int`)
 ```python
 a = 100
 ```
 
-#### 🌊 Float (`float`)
+####  Float (`float`)
 ```python
 pi = 3.14
 ```
 
-#### ⚡ Complex (`complex`)
+####  Complex (`complex`)
 ```python
 z = 2 + 3j
 ```
 
-#### 🔘 Boolean (`bool`)
+####  Boolean (`bool`)
 ```python
 is_valid = True
 print(5 > 3)  # True
