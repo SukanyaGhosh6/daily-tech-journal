@@ -1,4 +1,4 @@
-Day 9: Copy Operation and Python Operators – A Beginner's Take
+## Day 9: Copy Operation and Python Operators – A Beginner's Take
 
 So today, I revisited something that might look small but makes a big difference when working with collections in Python — **copy operations**. I also went over the different **types of operators** we use while writing code.
 
