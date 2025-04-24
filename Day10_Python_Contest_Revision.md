@@ -1,4 +1,4 @@
-# Day 11: Brushing Up Python Basics Through Contests
+# Day 10: Brushing Up Python Basics Through Contests
 
 Today I thought, instead of just revising Python concepts by flipping through notes, I’d actually try applying them — so I jumped into a GeeksforGeeks practice contest.
 
