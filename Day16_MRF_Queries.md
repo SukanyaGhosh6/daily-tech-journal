@@ -1,5 +1,4 @@
 # Day 16: SQL Revision – MRF Queries
-
 This document covers beginner-friendly SQL queries focused on retrieving employee data from a sample `EMP` table. It includes aggregate functions, filtering with `WHERE`, pattern matching with `LIKE`, and usage of logical operators.
 
 ---
