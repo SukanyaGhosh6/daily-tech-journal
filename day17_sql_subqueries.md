@@ -241,9 +241,7 @@ AND SAL*12 < (SELECT SAL*12 FROM EMP WHERE ENAME = 'KING');
 
 **Result:** Everyone except SMITH and KING
 
-```
 
----
 
 That wraps up Day 17. 
 
