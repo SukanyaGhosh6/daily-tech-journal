@@ -1,6 +1,6 @@
 #  Day 19 – SQL Practice with Nested Subqueries
 
-Welcome to **Day 19** of our SQL learning journey! 🚀 Today, we dive deep into **nested subqueries**, one of the most powerful tools in SQL when you want to extract specific data based on conditions related to aggregates, order, or even multiple tables.
+Welcome to **Day 19** of our SQL learning journey! Today, we dive deep into **nested subqueries**, one of the most powerful tools in SQL when you want to extract specific data based on conditions related to aggregates, order, or even multiple tables.
 
 Let’s go through 10 practical queries one by one — all focused on **employee and department** data — and solve them using **nested subqueries**.
 
