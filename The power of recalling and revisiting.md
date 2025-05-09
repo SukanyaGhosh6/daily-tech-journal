@@ -38,4 +38,4 @@ Since adopting this approach, my ability to learn and retain information has sky
 
 
 If you’ve been struggling to retain information, give revision and recall a try. It might feel challenging at first, but trust me—once you master it, you’ll never go back to passive learning again!
-Happy Happy Leaning :D
+Happy Happy Learning :D
