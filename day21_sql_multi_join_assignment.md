@@ -4,8 +4,7 @@ As part of my daily tech journal, today I tackled a set of challenging multi-joi
 
 ---
 
-##  EMP Table (Reference Snapshot)
-
+##  EMP Table 
 This is the data used for today's queries based on the SCOTT schema:
 
 | empno | ename  | job       | mgr  | hiredate   | sal   | comm  | deptno |
