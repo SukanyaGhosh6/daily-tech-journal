@@ -1,12 +1,12 @@
 # Day 21 – SQL Recalling: Multi Join Conditions Assignment
 
-Today’s SQL session focused on advanced multi-join queries based on the classic **SCOTT schema**. Below is a list of practical SQL questions designed to strengthen understanding of joins, filters, and conditional logic in SQL queries.
+As part of my daily tech journal, today I tackled a set of challenging multi-join queries using the classic SCOTT schema. These queries helped reinforce my skills in SQL joins, filtering conditions, and working with hierarchical employee-manager relationships.
 
 ---
 
-##  EMP Table (Reference)
+##  EMP Table (Reference Snapshot)
 
-Based on the screenshot, here's the data from the `EMP` table used in the queries:
+This is the data used for today's queries based on the SCOTT schema:
 
 | empno | ename  | job       | mgr  | hiredate   | sal   | comm  | deptno |
 |-------|--------|-----------|------|------------|-------|-------|--------|
@@ -26,91 +26,189 @@ Based on the screenshot, here's the data from the `EMP` table used in the querie
 
 ---
 
-##  Assignment Queries
+##  SQL Multi Join Assignment – With Queries & Solutions
 
-### 1. Employees working in 'NEW YORK' earning 4-digit salary  
-> **Output**: ENAME, MGR's SAL, EMP LOC
-
----
-
-### 2. Employees whose ENAME starts with 'S' or 'J'  
-> **Output**: ENAME, MGR, HIREDATE, MGR's COMM
-
----
-
-### 3. Managers hired after 1980 working in 'ACCOUNTING' or 'RESEARCH'  
-> **Output**: EMP JOB, MGR HIREDATE, MGR DEPT NAME
+### 1. ENAME, MGR’s SAL, and EMP LOC for those in NEW YORK with 4-digit salary
+```sql
+SELECT e.ename, m.sal AS mgr_sal, d.loc
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+JOIN dept d ON e.deptno = d.deptno
+WHERE d.loc = 'NEW YORK' AND e.sal BETWEEN 1000 AND 9999;
+````
 
 ---
 
-### 4. Employees earning more than 1000, with manager in 'SALES' department  
-> **Output**: ENAME, MGR ENAME, Their DNAME
+### 2. ENAME, MGR, HIREDATE, and MGR’s COMM if ENAME starts with 'S' or 'J'
+
+```sql
+SELECT e.ename, e.mgr, e.hiredate, m.comm
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+WHERE e.ename LIKE 'S%' OR e.ename LIKE 'J%';
+```
 
 ---
 
-### 5. All 'CLERK' employees  
-> **Output**: ENAME, MGR NAME, EMP’s LOC
+### 3. EMP JOB, MGR HIREDATE, and MGR DEPT NAME for MGR hired after 1980 in ACCOUNTING/RESEARCH
+
+```sql
+SELECT e.job, m.hiredate, d.dname
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+JOIN dept d ON m.deptno = d.deptno
+WHERE m.hiredate > '1980-01-01' AND d.dname IN ('ACCOUNTING', 'RESEARCH');
+```
 
 ---
 
-### 6. Managers whose job is 'PRESIDENT'  
-> **Output**: ENAME, MANAGER SAL, MGR LOC
+### 4. ENAME, MGR ENAME, and DNAME if EMP SAL > 1000 and MGR works in SALES
+
+```sql
+SELECT e.ename, m.ename AS mgr_name, d.dname
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+JOIN dept d ON m.deptno = d.deptno
+WHERE e.sal > 1000 AND d.dname = 'SALES';
+```
 
 ---
 
-### 7. Employees who earn more than their managers  
-> **Output**: ENAME, EMP SAL, MGR’s NAME, MGR’s SAL, EMP DNAME
+### 5. ENAME, MGR NAME, and EMP’s LOC for all CLERKs
+
+```sql
+SELECT e.ename, m.ename AS mgr_name, d.loc
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+JOIN dept d ON e.deptno = d.deptno
+WHERE e.job = 'CLERK';
+```
 
 ---
 
-### 8. Managers in 'NEW YORK' with SAL > 3000  
-> **Output**: ENAME, EMP SAL, MGR’s NAME, MGR’s DNAME
+### 6. ENAME, MANAGER SAL, and MGR LOC if MGR is PRESIDENT
+
+```sql
+SELECT e.ename, m.sal AS mgr_sal, d.loc
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+JOIN dept d ON m.deptno = d.deptno
+WHERE m.job = 'PRESIDENT';
+```
 
 ---
 
-### 9. Employees hired after their managers in the ACCOUNTING department  
-> **Output**: ENAME, EMP HIREDATE, MGR’s HIREDATE
+### 7. ENAME, EMP SAL, MGR NAME, MGR SAL, and EMP DNAME if EMP earns more than MGR
+
+```sql
+SELECT e.ename, e.sal, m.ename AS mgr_name, m.sal AS mgr_sal, d.dname
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+JOIN dept d ON e.deptno = d.deptno
+WHERE e.sal > m.sal;
+```
 
 ---
 
-### 10. Employees with their manager’s and manager’s manager's name  
-> **Output**: ENAME, MGR’S NAME, MGR’S MGR NAME
+### 8. ENAME, EMP SAL, MGR’s NAME, and MGR’s DNAME if MGR is in NEW YORK and SAL > 3000
+
+```sql
+SELECT e.ename, e.sal, m.ename AS mgr_name, d.dname
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+JOIN dept d ON m.deptno = d.deptno
+WHERE d.loc = 'NEW YORK' AND m.sal > 3000;
+```
 
 ---
 
-### 11. Employees whose manager was hired before 1982  
-> **Output**: ENAME, DNAME, MGR’S NAME, MGR’S DNAME
+### 9. ENAME, EMP HIREDATE, MGR HIREDATE where MGR hired before EMP in ACCOUNTING
+
+```sql
+SELECT e.ename, e.hiredate, m.hiredate AS mgr_hiredate
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+JOIN dept d ON e.deptno = d.deptno
+WHERE d.dname = 'ACCOUNTING' AND m.hiredate < e.hiredate;
+```
 
 ---
 
-### 12. Full hierarchy with locations  
-> **Output**: ENAME with DNAME, MGR’s NAME with LOC, MGR’s MGR NAME with LOC
+### 10. ENAME, MGR NAME, and MGR’s MGR NAME
+
+```sql
+SELECT e.ename, m.ename AS mgr_name, mm.ename AS mgr_mgr_name
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+JOIN emp mm ON m.mgr = mm.empno;
+```
 
 ---
 
-### 13. Complex Join with job, salary and department conditions  
-> **Output**:  
-- ENAME with DNAME  
-- MGR’s SAL with DNAME  
-- MGR’s MGR’s JOB with DNAME  
-> **Condition**:  
-- EMP in DEPT 10  
-- MGR job = 'PRESIDENT' or 'ACTUAL MANAGER'  
-- MGR’s MGR SAL ≥ MGR SAL
+### 11. ENAME, DNAME, MGR NAME, and MGR DNAME if MGR hired before 1982
+
+```sql
+SELECT e.ename, d1.dname, m.ename AS mgr_name, d2.dname AS mgr_dname
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+JOIN dept d1 ON e.deptno = d1.deptno
+JOIN dept d2 ON m.deptno = d2.deptno
+WHERE m.hiredate < '1982-01-01';
+```
 
 ---
 
-### 14. Employees and managers working in the same location  
-> **Output**: ENAME, EMP DNAME, MGR’S NAME, MGR’S DNAME
+### 12. ENAME with DNAME, MGR with LOC, MGR’s MGR NAME with LOC
+
+```sql
+SELECT e.ename, d1.dname AS emp_dname, 
+       m.ename AS mgr_name, d2.loc AS mgr_loc,
+       mm.ename AS mgr_mgr_name, d3.loc AS mgr_mgr_loc
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+JOIN emp mm ON m.mgr = mm.empno
+JOIN dept d1 ON e.deptno = d1.deptno
+JOIN dept d2 ON m.deptno = d2.deptno
+JOIN dept d3 ON mm.deptno = d3.deptno;
+```
+
+---
+
+### 13. ENAME with DNAME, MGR SAL with DNAME, MGR’s MGR JOB with DNAME (complex join)
+
+```sql
+SELECT e.ename, d1.dname AS emp_dname,
+       m.sal AS mgr_sal, d2.dname AS mgr_dname,
+       mm.job AS mgr_mgr_job, d3.dname AS mgr_mgr_dname
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+JOIN emp mm ON m.mgr = mm.empno
+JOIN dept d1 ON e.deptno = d1.deptno
+JOIN dept d2 ON m.deptno = d2.deptno
+JOIN dept d3 ON mm.deptno = d3.deptno
+WHERE e.deptno = 10
+  AND m.job IN ('PRESIDENT', 'ACTUAL MANAGER')
+  AND mm.sal >= m.sal;
+```
+
+---
+
+### 14. ENAME, EMP DNAME, MGR NAME, MGR DNAME if both work in the same LOC
+
+```sql
+SELECT e.ename, d1.dname AS emp_dname, 
+       m.ename AS mgr_name, d2.dname AS mgr_dname
+FROM emp e
+JOIN emp m ON e.mgr = m.empno
+JOIN dept d1 ON e.deptno = d1.deptno
+JOIN dept d2 ON m.deptno = d2.deptno
+WHERE d1.loc = d2.loc;
+```
 
 ---
 
 ##  Reflection
 
-These queries reinforced my understanding of:
-- Multi-table joins and aliasing  
-- Filtering with aggregate, string, and date conditions  
-- Hierarchical employee-manager relationships  
-- Logical operator usage (AND/OR) with joins  
+This practice session pushed me to understand how to structure layered joins, perform subqueries with conditions, and follow multi-level reporting hierarchies. Revisiting SCOTT schema has proven very effective for deep SQL recall.
 
 
