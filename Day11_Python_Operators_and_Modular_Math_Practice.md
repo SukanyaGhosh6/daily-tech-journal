@@ -9,7 +9,7 @@ Here are the problems I tackled today, along with their solutions and the ideas 
 ## Problem 1: Addition Under Modulo
 
 ### Task:
-Given two large integers `a` and `b`, find their sum under modulo `10^9 + 7`.
+Given two large integers `a` and `b`, find their sum under modulo `10^9 + 7`
 
 ### Why Modulo?
 Large numbers can overflow or exceed storage, so we reduce the result under a limit (`MOD = 10^9 + 7`), which is a big prime commonly used in programming contests.
