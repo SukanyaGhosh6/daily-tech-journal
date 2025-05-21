@@ -268,4 +268,4 @@ WHERE ENAME NOT LIKE 'A%';
 Today's revision was quite fun because instead of memorizing syntax like a robot, I created a mini EMP table in my mind and solved different types of queries on it.  
 This method made operators feel more real and practical, and it honestly didn't feel boring at all.  
 
-see you tomorrow!!
+see you tomorrow :D
