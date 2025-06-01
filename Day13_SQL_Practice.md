@@ -3,7 +3,7 @@
 Hey everyone!  
 Today was a power-packed day of SQL practice.  
 I worked mainly with `WHERE` clauses, logical operators, and special operators.  
-I also created two basic employee tables to test all the queries.
+I also created two basic employee tables to test all the queries
 
 Let's dive into everything I practiced today:
 
